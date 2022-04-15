@@ -6,7 +6,7 @@ body {
 }
 
 .side-banner {
-  width: 30vw;
+  width: 35vw;
   height: 100vh;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/%E1%9E%96%E1%9F%92%E1%9E%9A%E1%9F%83%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6.jpg");
   background-size: auto 1000px;
@@ -14,7 +14,7 @@ body {
 }
 
 .side-banner-logo-bar {
-  width: 30vw;
+  width: 35vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,11 +45,61 @@ body {
 .side-banner-attribution {
   position: absolute;
   bottom: 10px;
-  left: 15vw;
+  left: 17.5vw;
   transform: translate(-50%, 0);
 }
 
 .side-banner-attribution * {
   color: white;
   font-size: 1em;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 65vw;
+}
+
+.middle-container {
+  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+
+.input-container {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-container {
+  background-color: rgb(249, 250, 251);
+  flex: 1;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.bottom-container {
+  background-color: rgb(249, 250, 251);
+  flex: 1;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
+  padding-left: 50px;
+  padding-top: 40px;
 }/*# sourceMappingURL=style.css.map */
