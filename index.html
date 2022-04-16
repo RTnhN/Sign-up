@@ -36,21 +36,30 @@
       <form action="" id="signupForm">
         <div class="first-name-container input-container">
           <label for="firstName">FIRST NAME</label>
+          <input type="text" name="firstName" id="firstName" placeholder="John">
         </div>
         <div class="last-name-container input-container">
           <label for="lastName">LAST NAME</label>
+          <input type="text" name="lastName" id="lastName" placeholder="Smith">
         </div>
         <div class="email-container input-container">
           <label for="email">EMAIL</label>
+          <input type="email" name="email" id="email" title="Please enter a valid phone email address"
+            placeholder="JSmith@mail.com">
         </div>
         <div class="phone-number-container input-container">
           <label for="phoneNumber">PHONE NUMBER</label>
+          <input type="text" name="phoneNumber" id="phoneNumber" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+            title="Please enter a valid phone number" placeholder="123-456-7890">
         </div>
         <div class="password-container input-container">
           <label for="password">PASSWORD</label>
+          <input type="password" name="password" id="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
         </div>
         <div class="passwordConfirm-container input-container">
           <label for="passwordConfirm">CONFIRM PASSWORD</label>
+          <input type="password" name="passwordConfirm" id="passwordConfirm"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" oninput="checkPassword(this)">
         </div>
       </form>
     </div>
@@ -61,8 +70,15 @@
       
     </div>
   </div>
-
-  <script src="./script.js"></script>
+  <script>
+    function checkPassword(password) {
+      if (password.value != document.getElementById("password").value) {
+        password.setCustomValidity("Passwords must match.");
+      } else {
+        password.setCustomValidity("");
+      }
+    }
+  </script>
 </body>
 
 </html>
