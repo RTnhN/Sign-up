@@ -127,13 +127,34 @@ form{
 }
 
 .bottom-container{
+  display:flex;
+  gap:30px;
+  flex-direction: column;
   background-color:  $top-bottom-main-content-color;
   flex:1;
   box-shadow: inset 0 3px 8px  rgba(0,0,0,0.5);
   padding-left: $main-content-left-padding;
   padding-top: 40px;
 }
- 
+
+.create-account-button{
+  background-color: rgb(73, 121, 73);
+  height: 40px;
+  width: 200px;
+  color: white;
+  font-size: .9em;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+}
+
+.login-container a{
+  color: rgb(73, 121, 73);
+  text-decoration: none;
+  padding-left: 3px;
+}
+
 label{
   font-size: .7em;
   color: rgb(40, 40, 40, .5);
