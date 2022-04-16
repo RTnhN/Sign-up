@@ -31,13 +31,12 @@ body{
   height: $side-banner-height;
   background-color: rgb(0, 0, 0, 0.5);
   position: relative;
-  top: calc(100vh/6)
-
+  top: calc(100vh/6);
 }
 
 .odin-logo{
-  width: calc($side-banner-height - 40px);
   height: calc($side-banner-height - 40px);
+  aspect-ratio: auto;
 }
 
 .side-banner-logo-container{
@@ -45,6 +44,7 @@ body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .logo-text{
