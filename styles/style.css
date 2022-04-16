@@ -89,7 +89,7 @@ body {
 
 form {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 400px));
+  grid-template-columns: repeat(2, minmax(200px, 400px));
   grid-template-rows: repeat(3, 1fr);
   -moz-column-gap: 60px;
        column-gap: 60px;
