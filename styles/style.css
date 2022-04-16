@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
   display: flex;
   flex-direction: row;
@@ -9,8 +13,7 @@ body {
   width: 35vw;
   height: 100vh;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/%E1%9E%96%E1%9F%92%E1%9E%9A%E1%9F%83%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6.jpg");
-  background-size: auto 1000px;
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .side-banner-logo-bar {
@@ -25,8 +28,8 @@ body {
 }
 
 .odin-logo {
-  width: calc(16.6666666667vh - 40px);
   height: calc(16.6666666667vh - 40px);
+  aspect-ratio: auto;
 }
 
 .side-banner-logo-container {
@@ -34,6 +37,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .logo-text {
@@ -63,12 +67,19 @@ body {
 }
 
 .middle-container {
-  height: 33vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-left: 50px;
+}
+
+.middle-container span {
+  font-size: 1.2em;
+  color: rgb(10, 10, 10);
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 form {
@@ -77,6 +88,7 @@ form {
   grid-template-rows: 1fr 1fr 1fr;
   -moz-column-gap: 60px;
        column-gap: 60px;
+  row-gap: 20px;
 }
 
 .input-container {
@@ -96,10 +108,61 @@ form {
   align-items: flex-start;
 }
 
+.top-container p {
+  font-size: 1.2em;
+  color: rgb(10, 10, 10);
+  width: 800px;
+  font-weight: 700;
+}
+
+.top-container p:last-child {
+  margin-bottom: 40px;
+}
+
 .bottom-container {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
   background-color: rgb(249, 250, 251);
   flex: 1;
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
   padding-left: 50px;
   padding-top: 40px;
+}
+
+.create-account-button {
+  background-color: rgb(73, 121, 73);
+  height: 40px;
+  width: 200px;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+}
+
+.login-container a {
+  color: rgb(73, 121, 73);
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+label {
+  font-size: 0.7em;
+  color: rgba(40, 40, 40, 0.5);
+  margin-bottom: 4px;
+}
+
+input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.input-container input:valid {
+  border-color: lightblue;
+}
+
+.input-container input:invalid {
+  border-color: red;
 }/*# sourceMappingURL=style.css.map */
