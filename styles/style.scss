@@ -1,7 +1,13 @@
 $side-banner-width: 35vw;
-$side-banner-height: calc(100vh/6);
-$main-content-padding: 50px;
+$side-banner-height: calc(100vh/8 + 40px);
+$main-content-margin: 50px;
 $top-bottom-main-content-color: rgba(249,250,251,255);
+$green-accent-color: rgb(73, 121, 73);
+
+@mixin margin-all {
+  margin-left: $main-content-margin;
+  margin-right: $main-content-margin;
+}
 
 @font-face {
   font-family: "Norse-Bold";
@@ -15,6 +21,7 @@ $top-bottom-main-content-color: rgba(249,250,251,255);
 body{
   display: flex;
   flex-direction: row;
+  
   margin: 0;
 
 }
@@ -78,13 +85,12 @@ body{
 }
 
 .middle-container{
+  @include margin-all;
   height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: $main-content-padding;
-  padding-right: $main-content-padding;
 }
 
 .middle-container span{
@@ -113,7 +119,7 @@ form{
 .top-container{
   background-color:$top-bottom-main-content-color;
   flex:1;
-  padding-left: $main-content-padding;
+  padding-left: $main-content-margin;
   display:flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -124,9 +130,9 @@ form{
 .top-container p{
   font-size: 1.2em;
   color: rgb(10, 10, 10);
-  width: calc(100vw - $side-banner-width - $main-content-padding*4);
+  width: calc(100vw - $side-banner-width - $main-content-margin*4);
   font-weight: 700;
-  padding-right: $main-content-padding;
+  padding-right: $main-content-margin;
   margin-right: 200px;
 }
 
@@ -143,23 +149,25 @@ form{
   box-shadow: inset 0 3px 8px  rgba(0,0,0,0.5);
   padding-left: $main-content-padding;
   width: calc(100vw - $side-banner-width);
-  padding-top: 40px;
+}
+
+.bottom-container button, .bottom-container .login-container{
+  @include margin-all;
 }
 
 .create-account-button{
-  background-color: rgb(73, 121, 73);
+  background-color: $green-accent-color;
   height: 40px;
   width: 200px;
   color: white;
   font-size: .9em;
   font-weight: bold;
   border-radius: 5px;
-  padding: 10px;
   border: none;
 }
 
 .login-container a{
-  color: rgb(73, 121, 73);
+  color: $green-accent-color;
   text-decoration: none;
   padding-left: 3px;
 }
