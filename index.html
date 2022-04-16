@@ -31,33 +31,33 @@
     </div>
     <div class="middle-container">
       <span>Let's do this!</span>
-      <form action="" id="signupForm">
+      <form action="/submit" id="signupForm">
         <div class="first-name-container input-container">
           <label for="firstName">FIRST NAME</label>
-          <input type="text" name="firstName" id="firstName" placeholder="John">
+          <input type="text" name="firstName" id="firstName" placeholder="John" required> 
         </div>
         <div class="last-name-container input-container">
           <label for="lastName">LAST NAME</label>
-          <input type="text" name="lastName" id="lastName" placeholder="Smith">
+          <input type="text" name="lastName" id="lastName" placeholder="Smith" required>
         </div>
         <div class="email-container input-container">
           <label for="email">EMAIL</label>
           <input type="email" name="email" id="email" title="Please enter a valid phone email address"
-            placeholder="JSmith@mail.com">
+            placeholder="JSmith@mail.com" required>
         </div>
         <div class="phone-number-container input-container">
           <label for="phoneNumber">PHONE NUMBER</label>
           <input type="text" name="phoneNumber" id="phoneNumber" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-            title="Please enter a valid phone number" placeholder="123-456-7890">
+            title="Please enter a valid phone number" placeholder="123-456-7890" required>
         </div>
         <div class="password-container input-container">
           <label for="password">PASSWORD</label>
-          <input type="password" name="password" id="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+          <input type="password" name="password" id="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
         </div>
         <div class="passwordConfirm-container input-container">
           <label for="passwordConfirm">CONFIRM PASSWORD</label>
           <input type="password" name="passwordConfirm" id="passwordConfirm"
-            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" oninput="checkPassword(this)">
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" oninput="checkPassword(this)" required>
         </div>
       </form>
     </div>
