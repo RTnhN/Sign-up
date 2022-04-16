@@ -20,8 +20,7 @@ body{
   width: $side-banner-width;
   height: 100vh;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ef/%E1%9E%96%E1%9F%92%E1%9E%9A%E1%9F%83%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6.jpg');
-  background-size: auto 1000px;
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .side-banner-logo-bar{
