@@ -74,12 +74,19 @@ body{
 }
 
 .middle-container{
-  height: 33vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-left: $main-content-left-padding;
+}
+
+.middle-container span{
+  font-size: 1.2em;
+  color: rgb(10, 10, 10);
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 
@@ -88,6 +95,7 @@ form{
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   column-gap: 60px;
+  row-gap: 20px;
 }
 
 .input-container{
@@ -115,3 +123,21 @@ form{
   padding-top: 40px;
 }
  
+label{
+  font-size: .7em;
+  color: rgb(40, 40, 40, .5);
+  margin-bottom: 4px;
+}
+
+input{
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.input-container input:valid{
+  border-color: lightblue;
+}
+
+.input-container input:invalid{
+  border-color: red;
+}
